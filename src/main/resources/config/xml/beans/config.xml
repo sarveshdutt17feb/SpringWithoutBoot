@@ -3,9 +3,36 @@
         "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
 
 <beans>
-
+<bean id="address" class="config.xml.beans.Address">
+    <property name="city" value="LKO"></property>
+    <property name="street" value="121/31"></property>
+</bean>
     <!-- bean definitions here -->
 <bean class="config.xml.beans.Student" id="student1">
+    <property name="name" value="sarvesh"></property>
+    <property name="age" value="24"></property>
+    <property name="address" ref="address"/>
+<!--    <property name="friends">-->
+<!--    <list>-->
+<!--        <value></value>-->
+<!--        <value></value>-->
+<!--        <value></value>-->
+<!--    </list>-->
+<!--    </property>-->
+<!--    <property name="sortedNameSet">-->
+<!--        <set>-->
+<!--            <value></value>-->
+<!--            <value></value>-->
+<!--            <value></value>-->
+<!--        </set>-->
+<!--    </property>-->
+    <property name="map">
+        <map>
+           <entry key="Java" value="3000"/>
+           <entry key="C" value="1000"/>
+           <entry key="C++" value="2000"/>
 
+        </map>
+    </property>
 </bean>
 </beans>
